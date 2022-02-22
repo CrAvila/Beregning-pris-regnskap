@@ -66,9 +66,9 @@ let calculate = () => {
              licensingCosts + 
              qualityControlActivitiesCost;
   
-  qControlActivitiesText.innerText = Math.round(qualityControlActivitiesCost) + " kr";
-  licensingCostsText.innerText = Math.round(licensingCosts) + " kr";
-  price.innerText = Math.round(total) + " kr";
+  qControlActivitiesText.innerText = Math.round(qualityControlActivitiesCost) + "kr";
+  licensingCostsText.innerText = Math.round(licensingCosts) + "kr";
+  price.innerText = Math.round(total) + "kr";
   
     el("incoming-invoices").value = incomingInvoicesNumber;
     el("outgoing-invoices").value = outgoingInvoicesNumber;
@@ -78,6 +78,7 @@ let calculate = () => {
   
 }
 
-let button = el("calculate-button");
-
-button.addEventListener("click", calculate);
+[].forEach.call(document.querySelectorAll("input"), function(input) {
+  input.addEventListener("change", calculate, false);
+  input.addEventListener("input", calculate, false);
+});
