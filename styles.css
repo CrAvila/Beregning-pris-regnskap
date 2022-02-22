@@ -78,7 +78,7 @@
   display: block;
 }
 
-.calculator-box a span:nth-child(1) {
+..result-text span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
@@ -383,7 +383,7 @@ div.p-result-cost{
 }
 
 .monthly-price-text{
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 15px;
   width: 100% !important;
   text-align: center;
