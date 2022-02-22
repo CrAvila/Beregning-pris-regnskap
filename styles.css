@@ -428,6 +428,11 @@ div.p-result-cost{
     padding: 20px;
   }
 
+#button-container p{
+  font-size: 0.8rem;
+  color: #78909C;
+}
+
 /*Responsive design for mobiles*/
 
 @media (max-width: 1000px){
