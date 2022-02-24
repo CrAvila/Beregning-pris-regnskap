@@ -82,3 +82,36 @@ let calculate = () => {
   input.addEventListener("change", calculate, false);
   input.addEventListener("input", calculate, false);
 });
+
+
+let resetCalc = () => {
+    /*Input Fields*/
+  let incomingInvoicesInput = el("incoming-invoices");
+  let outgoingInvoicesInput = el("outgoing-invoices");
+  let creditCardShoppingInput = el("credit-card-shopping");
+  let numberOfEmployeesInput = el("number-employees");
+  let foreignTransactionsInput = el("foreign-transactions");
+
+  /*Conditional Fields*/
+  let cashRegisterInput = el("cash-register");
+  let vippsPaymentTerminalInput = el("payment-terminal");
+  let intercompanyAccountingInput = el("intercompany-accounting");
+  let projectCostHandlingInput = el("cost-handling");
+  
+  incomingInvoicesInput.value = 0;
+  outgoingInvoicesInput.value = 0;
+  creditCardShoppingInput.value = 0;
+  numberOfEmployeesInput.value = 0;
+  foreignTransactionsInput.value = 0;
+  
+  cashRegisterInput.checked = true;
+  vippsPaymentTerminalInput.checked = true;
+  intercompanyAccountingInput.checked = true;
+  projectCostHandlingInput.checked = true;
+  
+  calculate();
+}
+
+
+let button = el("nullstille");
+button.addEventListener("click", resetCalc);
