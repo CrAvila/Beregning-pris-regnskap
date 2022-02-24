@@ -334,6 +334,7 @@ div.p-result-cost{
 }
 
 .reset-button {
+  padding: 3px;
   border-radius: 5px;
   align-items: center;
   background-color: #06f;
